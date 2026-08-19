@@ -1,0 +1,23 @@
+{
+  "name": "certiuni-backend",
+  "version": "3.0.0",
+  "description": "Backend API de CertiUni — Plateforme de certification de diplômes universitaires",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.3.0",
+    "bullmq": "^6.1.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.23.0",
+    "puppeteer": "^25.7.0",
+    "redis": "^6.2.1",
+    "xlsx": "^0.18.5"
+  }
+}
