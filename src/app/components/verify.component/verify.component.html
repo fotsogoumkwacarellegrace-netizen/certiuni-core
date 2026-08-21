@@ -1,0 +1,14 @@
+<div class="page-container">
+  <app-header />
+
+  <main class="main-content">
+    <app-recherche-uuid (surRecherche)="traiterRecherche($event)" />
+    <app-cartes-services 
+  (openQrScanner)="onOpenQrScannerModal()"
+  (pdfSelected)="onProcessPdf($event)">
+</app-cartes-services>
+    <app-depot-excel></app-depot-excel>
+
+  </main>
+  <app-footer></app-footer>
+</div>

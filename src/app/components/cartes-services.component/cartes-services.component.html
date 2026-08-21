@@ -1,0 +1,54 @@
+<div class="cards-grid">
+  
+  <!-- 1. SCAN QR CODE : Déclenche la caméra/modale QR -->
+  <div class="card card-green" (click)="openQrScanner.emit()">
+    <div class="icon-circle icon-blue">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Vérification par QR Code</h3>
+      <p class="card-subtitle">Scanner avec la caméra</p>
+    </div>
+    <span class="card-arrow green-color">→</span>
+  </div>
+
+  <!-- 2. ANALYSE IA : Ouvre l'explorateur pour choisir un PDF -->
+  <div class="card card-blue" (click)="pdfInput.click()">
+    <div class="icon-circle icon-green">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Analyse de document par IA</h3>
+      <p class="card-subtitle">Uploader un PDF</p>
+    </div>
+    <span class="card-arrow blue-color">→</span>
+
+    <!-- Input masqué déclenché au clic sur la carte -->
+    <input 
+      #pdfInput 
+      type="file" 
+      accept="application/pdf" 
+      style="display: none;" 
+      (change)="onPdfSelected($event)" 
+    />
+  </div>
+
+  <!-- 3. TABLEAU DE MASSE : Redirige vers /bulk (Écran 9) -->
+  <div class="card card-yellow" routerLink="/bulk">
+    <div class="card-icon-wrapper yellow-bg">
+      <svg class="card-icon yellow-color" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+      </svg>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">Tableau de Masse (100 CV)</h3>
+      <p class="card-subtitle">Vérification en lot</p>
+    </div>
+    <span class="card-arrow yellow-color">→</span>
+  </div>
+
+</div>

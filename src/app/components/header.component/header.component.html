@@ -1,0 +1,46 @@
+<header class="header-wrapper">
+  <div class="header-container">
+    
+    <!-- Logo -->
+    <a routerLink="/" class="logo-brand">
+      <img src="images/logo.png" alt="CertiUni Logo" class="logo-img" />
+      <span class="brand-name">CertiUni</span>
+    </a>
+
+    <!-- Navigation Desktop -->
+    <nav class="nav-desktop">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Verify</a>
+      <a routerLink="/institutions" routerLinkActive="active" class="nav-link"> Institutions</a>
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">About</a>
+
+      <!-- Langue -->
+      <div class="lang-switcher">
+        <button (click)="setLanguage('FR')" [class.active]="currentLang() === 'FR'" class="lang-btn">FR</button>
+        <button (click)="setLanguage('EN')" [class.active]="currentLang() === 'EN'" class="lang-btn">EN</button>
+      </div>
+
+      <!-- Bouton Accès -->
+      <a routerLink="/institutional-access" class="btn-institutional">Institutional Access</a>
+    </nav>
+
+    <!-- Bouton Hamburger Mobile -->
+    <button (click)="toggleMobileMenu()" class="hamburger-btn">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width:24px; height:24px;">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Menu Deroulant Mobile -->
+  @if (isMobileMenuOpen()) {
+    <div class="mobile-menu-drawer">
+      <div class="mobile-nav-list">
+        <a routerLink="/" (click)="closeMobileMenu()" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="mobile-nav-link">Verify</a>
+        <a routerLink="/institutions" (click)="closeMobileMenu()" routerLinkActive="active" class="mobile-nav-link">Verify Institutions</a>
+        <a routerLink="/about" (click)="closeMobileMenu()" routerLinkActive="active" class="mobile-nav-link">About</a>
+      </div>
+      <a routerLink="/institutional-access" (click)="closeMobileMenu()" class="btn-institutional" style="width: 100%;">Institutional Access</a>
+    </div>
+  }
+</header>

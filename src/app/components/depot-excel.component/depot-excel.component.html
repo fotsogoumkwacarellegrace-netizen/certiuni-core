@@ -1,0 +1,21 @@
+<div 
+  class="dropzone" 
+  (dragover)="onDragOver($event)" 
+  (drop)="onFileDropped($event)"
+  (click)="excelInput.click()"
+>
+  <input #excelInput type="file" (change)="onFileSelected($event)" accept=".xlsx, .xls" hidden />
+  
+  <div class="dropzone-icon-wrapper">
+    <svg class="dropzone-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+    </svg>
+  </div>
+  
+  <p class="dropzone-title">Recrutement de masse ?</p>
+  <p class="dropzone-subtitle">Glissez votre fichier Excel ici ou <span class="link-blue">cliquez pour parcourir</span></p>
+  
+  <div class="badge-wrapper">
+    <span class="badge-formats">Formats acceptés : .xlsx, .xls</span>
+  </div>
+</div>

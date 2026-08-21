@@ -1,0 +1,115 @@
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+  border-top: 3px solid transparent;
+}
+
+.card-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.4rem 0;
+}
+
+.card-subtitle {
+  font-size: 0.825rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.card-arrow {
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Style de la pastille circulaire pour le logo */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.icon-circle svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* --- Carte QR Code (Bleue) --- */
+.icon-blue {
+  background-color: #eff6ff;
+  color: #1e3a8a;
+}
+
+/* La pastille devient bleue avec icône blanche au survol */
+.card-qr:hover .icon-blue {
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+
+/* --- Carte IA / OCR (Verte) --- */
+.icon-green {
+  background-color: #ecfdf5;
+  color: #10b981;
+}
+
+/* La pastille devient verte avec icône blanche au survol */
+.card-ocr:hover .icon-green {
+  background-color: #10b981;
+  color: #ffffff;
+}
+/* Carte QR Code */
+.card-green { border-top-color: #10b981; }
+.green-bg { background-color: #a7f3d0; }
+.green-color { color: #059669; }
+
+/* Carte Analyse IA */
+.card-blue { border-top-color: #2563eb; }
+.blue-bg { background-color: #dbeafe; }
+.blue-color { color: #2563eb; }
+
+/* Carte Tableau de Masse */
+.card-yellow { border-top-color: #f59e0b; }
+.yellow-bg { background-color: #fef3c7; }
+.yellow-color { color: #d97706; }

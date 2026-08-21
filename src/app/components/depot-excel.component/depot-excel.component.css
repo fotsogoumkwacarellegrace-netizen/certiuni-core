@@ -1,0 +1,118 @@
+.dropzone {
+  max-width: 650px;
+  margin: 0 auto;
+  border: 2px dashed #cbd5e1;
+  border-radius: 1rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.dropzone:hover {
+  background-color: #f1f5f9;
+  border-color: #0284c7;
+}
+
+.dropzone-icon-wrapper {
+  width: 56px;
+  height: 56px;
+  background-color: #e0f2fe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem auto;
+}
+
+.dropzone-icon {
+  width: 28px;
+  height: 28px;
+  color: #0284c7;
+}
+
+.dropzone-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.25rem 0;
+}
+
+.dropzone-subtitle {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin: 0 0 0.75rem 0;
+}
+
+.link-blue {
+  color: #0284c7;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.badge-formats {.dropzone {
+  max-width: 720px;
+  margin: 0 auto;
+  border: 1.5px dashed #60a5fa;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.dropzone-icon-wrapper {
+  margin: 0 auto 0.75rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropzone-icon {
+  width: 32px;
+  height: 32px;
+  color: #2563eb;
+}
+
+.dropzone-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 0.35rem 0;
+}
+
+.dropzone-subtitle {
+  font-size: 0.875rem;
+  color: #475569;
+  margin: 0 0 1rem 0;
+}
+
+.link-blue {
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.badge-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.badge-formats {
+  font-size: 0.75rem;
+  color: #2563eb;
+  background-color: #dbeafe;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+  display: inline-block;
+  font-size: 0.75rem;
+  color: #64748b;
+  background-color: #e2e8f0;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}

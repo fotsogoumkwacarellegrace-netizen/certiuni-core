@@ -1,0 +1,30 @@
+<div class="hero-section">
+  <div class="logo-wrapper">
+    <img src="images/logo.png" alt="CertiUni" class="hero-logo" />
+  </div>
+  <p class="hero-subtitle">Plateforme sécurisée de vérification de documents académiques.</p>
+  <p class="hero-tags">Rapide • Fiable • Officielle</p>
+</div>
+
+<div class="search-box">
+  <div class="search-input-wrapper">
+    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+    </svg>
+    <input 
+      type="text" 
+      [ngModel]="uuidInput()" 
+      (ngModelChange)="uuidInput.set($event)"
+      (keyup.enter)="lancerRecherche()"
+      placeholder="Entrez l'UUID à 36 caractères..." 
+      class="search-input"
+    />
+    <button class="btn-verify" (click)="lancerRecherche()">
+      Vérifier <span>→</span>
+    </button>
+  </div>
+
+  @if (errorMessage()) {
+    <p class="error-msg">{{ errorMessage() }}</p>
+  }
+</div>
