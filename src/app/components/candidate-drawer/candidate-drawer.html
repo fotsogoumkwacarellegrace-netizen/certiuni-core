@@ -1,0 +1,43 @@
+<div class="drawer-overlay" (click)="onClose()"></div>
+
+<aside class="side-drawer" role="dialog" aria-modal="true">
+  <div class="drawer-header">
+    <h3>Notes : {{ candidate()?.name }}</h3>
+    <button class="btn-close" (click)="onClose()" aria-label="Fermer">✕</button>
+  </div>
+
+  <div class="drawer-summary">
+    <div>
+      <span class="sub-label">PROGRAMME</span>
+      <p class="sub-value">{{ candidate()?.program || 'N/A' }}</p>
+    </div>
+    <div class="text-right">
+      <span class="sub-label">MOYENNE G.</span>
+      <p class="sub-value highlight">{{ candidate()?.average }}/20</p>
+    </div>
+  </div>
+
+  <div class="courses-list">
+    @for (course of candidate()?.courses; track course.title) {
+      <div class="course-card">
+        <div class="course-info">
+          <h4>{{ course.title }}</h4>
+          <span>{{ course.semester }}</span>
+        </div>
+        <div class="course-grade">
+          <span class="score">{{ course.grade }}/20</span>
+          <span class="credits">{{ course.credits }} Crédits</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="drawer-footer">
+    <button class="btn-export" (click)="exportPdf()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/>
+      </svg>
+      Exporter le relevé (PDF)
+    </button>
+  </div>
+</aside>

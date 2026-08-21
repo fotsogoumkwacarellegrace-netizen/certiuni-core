@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+  <main class="main-content" [class.blurred]="selectedCandidate()">
+    <h1 class="page-title">Bulk Operations Dashboard</h1>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Total Candidates</span>
+        <span class="stat-value">1,240</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Verified Records</span>
+        <span class="stat-value highlight">856</span>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table class="candidates-table">
+        <thead>
+          <tr>
+            <th>Candidate ID</th>
+            <th>Name</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (candidate of candidates(); track candidate.id) {
+            <tr (click)="openNotes(candidate)" class="clickable-row">
+              <td class="col-id">{{ candidate.id }}</td>
+              <td class="col-name">{{ candidate.name }}</td>
+              <td>
+                <span class="badge" [ngClass]="candidate.status.toLowerCase()">
+                  {{ candidate.status }}
+                </span>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  @if (selectedCandidate()) {
+    <app-candidate-drawer 
+      [candidate]="selectedCandidate()" 
+      (close)="closeDrawer()">
+    </app-candidate-drawer>
+  }
+</div>

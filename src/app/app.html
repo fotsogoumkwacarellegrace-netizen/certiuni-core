@@ -1,1 +1,15 @@
-<app-ocr-analysis-page></app-ocr-analysis-page>
+<div class="app-layout">
+  <!-- Barre latérale à gauche -->
+  <app-sidebar></app-sidebar>
+
+  <!-- zone principale -->
+  <div class="main-wrapper">
+    <!-- Barre supérieure en haut -->
+    <app-topbar></app-topbar>
+
+    <!-- Zone dynamique où s'affiche l'Écran 9 quand on est sur /bulk -->
+    <main class="content-area">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

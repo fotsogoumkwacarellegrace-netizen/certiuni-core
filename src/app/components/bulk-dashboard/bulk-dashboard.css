@@ -1,0 +1,90 @@
+.dashboard-container {
+  position: relative;
+  padding: 1.5rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f8fafc;
+}
+
+.main-content.blurred {
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.page-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.stats-grid {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  flex: 1;
+  max-width: 220px;
+}
+
+.stat-label { font-size: 0.72rem; color: #64748b; font-weight: 600; display: block; }
+.stat-value { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin-top: 0.25rem; display: block; }
+.stat-value.highlight { color: #059669; }
+
+.table-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.candidates-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.candidates-table th {
+  padding: 0.85rem 1rem;
+  font-size: 0.75rem;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.candidates-table td {
+  padding: 0.85rem 1rem;
+  font-size: 0.82rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.clickable-row { cursor: pointer; transition: background 0.15s ease; }
+.clickable-row:hover { background-color: #f8fafc; }
+
+.col-id { color: #64748b; font-weight: 600; }
+.col-name { font-weight: 700; color: #0f172a; }
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.badge.verified { background-color: #d1fae5; color: #047857; }
+.badge.pending { background-color: #fef3c7; color: #b45309; }
+.badge.failed { background-color: #fee2e2; color: #b91c1c; }
+
+/* Responsive Tablette & Mobile */
+@media (max-width: 768px) {
+  .dashboard-container { padding: 1rem; }
+  .stats-grid { flex-direction: column; }
+  .stat-card { max-width: 100%; }
+}

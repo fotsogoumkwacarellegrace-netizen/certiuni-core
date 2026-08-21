@@ -23,7 +23,6 @@
   position: relative;
 }
 
-/* Trait noir sous "Scanner" */
 .top-link.active {
   color: #0f172a;
   font-weight: 700;
@@ -42,16 +41,10 @@
 .top-link.align-right {
   position: absolute;
   right: 2rem;
-  color: black;
-  width: 130px;
-  height: 15px;
-  text-align: center;
-  border-radius: 7px;
-  background-color: rgba(199, 193, 193, 0.513);
 }
 
 .security-banner {
-  background-color: #051643;
+  background-color: #0b0f19;
   color: #ffffff;
   font-size: 0.7rem;
   font-weight: 600;
@@ -62,12 +55,9 @@
   padding: 0.35rem;
 }
 
-.security-banner svg {
-  width: 12px;
-  height: 12px;
-  
-}
+.security-banner svg { width: 12px; height: 12px; }
 
+/* Responsivité */
 @media (max-width: 768px) {
   .top-nav {
     flex-wrap: wrap;
@@ -77,19 +67,7 @@
     justify-content: center;
   }
 
-  .top-link {
-    padding: 4px 0;
-    font-size: 0.75rem;
-  }
-
-  /* Repasse le lien de droite en flux normal pour ne pas chevaucher les autres */
-  .top-link.align-right {
-    position: static;
-  }
-
-  .security-banner {
-    font-size: 0.65rem;
-    text-align: center;
-    padding: 0.35rem 0.5rem;
-  }
+  .top-link { padding: 4px 0; font-size: 0.75rem; }
+  .top-link.align-right { position: static; }
+  .security-banner { font-size: 0.65rem; text-align: center; }
 }
