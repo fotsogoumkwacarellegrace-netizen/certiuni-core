@@ -1,0 +1,15 @@
+<div class="app-layout">
+  <!-- Menu latéral -->
+  <app-sidebar />
+
+  <!-- Panneau principal droit -->
+  <div class="main-wrapper">
+    <app-topbar />
+
+    <main class="content-area">
+      <app-ocr-modal 
+        (fileSelected)="handleFile($event)" 
+        (cancel)="goBack()" />
+    </main>
+  </div>
+</div>

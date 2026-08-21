@@ -1,0 +1,30 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column; /* Empile la sidebar et le contenu principal */
+  }
+
+  .content-area {
+    padding: 1rem;
+    min-height: calc(100vh - 120px);
+  }
+}

@@ -1,13 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { VerifyComponent } from './components/verify.component/verify.component';
-
+import { Component } from '@angular/core';
+import { OcrAnalysisPageComponent } from './components/ocr-analysis-page/ocr-analysis-page';
 
 @Component({
   selector: 'app-root',
-  imports: [VerifyComponent],
+  standalone: true,
+  imports: [OcrAnalysisPageComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('ecran1');
+  title = 'certiuni-app';
 }

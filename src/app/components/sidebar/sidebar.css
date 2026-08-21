@@ -1,0 +1,176 @@
+.sidebar {
+  width: 230px;
+  background-color: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem 0.85rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+.logo{
+    width: 100px;
+    height: 60px;
+    font-weight: bold;
+    
+    
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+  padding-left: 0.25rem;
+}
+
+.brand-logo {
+  width: 26px;
+  height: 26px;
+  color: #0d9488;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #0490e1e7;
+  display: block;
+
+}
+
+.brand-sub {
+  font-size: 0.58rem;
+  color: rgb(96, 96, 96);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  display: block;
+  margin-top: 3px;
+
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.menu-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Badge Vert "Verify Document" */
+.menu-item.active {
+  background-color: #44e173;
+  color: #064e19;
+  border-radius: 10px;
+}
+
+.menu-item.active .icon-active {
+  width: 18px;
+  height: 18px;
+  color: #047857;
+}
+
+.btn-new-verification {
+  width: 100%;
+  background-color: #030712;
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.btn-new-verification svg {
+  width: 15px;
+  height: 15px;
+}
+
+.menu-item-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.35rem 0.5rem;
+  text-decoration: none;
+  font-size: 0.75rem;
+  color: #424346;
+  font-weight: 500;
+}
+
+/* Taille fixe stricte pour les icônes Support & Logout */
+.menu-item-sub svg {
+  width: 14px !important;
+  height: 14px !important;
+  max-width: 14px !important;
+  max-height: 14px !important;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .sidebar-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .menu-item {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 12px;
+  }
+
+  .sidebar-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .btn-new-verification {
+    margin-bottom: 0;
+    width: auto;
+    flex: 1 1 auto;
+  }
+
+  .menu-item-sub {
+    padding: 0.4rem 0.6rem;
+  }
+}

@@ -1,0 +1,21 @@
+<div class="ocr-modal">
+  <div class="modal-header">
+    <h2>Scanner IA OCR</h2>
+    <!-- Icône de cadre / scan en haut à droite -->
+    <button class="btn-icon" aria-label="Scan Frame">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="drop-zone" (drop)="onDrop($event)" (dragover)="$event.preventDefault()">
+    <input type="file" id="ocrFile" (change)="onFileSelected($event)" accept="image/*,.pdf" hidden />
+    <p class="drop-title">Glissez la photo ou le scan du diplôme ici</p>
+    <p class="drop-subtitle">Formats acceptés : PNG, JPEG, PDF jusqu'à 10 Mo</p>
+  </div>
+
+  <label for="ocrFile" class="btn-browse">PARCOURIR LE FICHIER</label>
+
+  <a routerLink="/" class="link-cancel">Annuler et Revenir</a>
+</div>
